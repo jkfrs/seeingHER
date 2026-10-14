@@ -1,0 +1,81 @@
+/* Shared visual language inspired by the supplied museum-site reference. */
+:root {
+  --ink: #252422;
+  --paper: #f3f0e9;
+  --white: #fffdf8;
+  --muted: #77736b;
+  --line: #d6d0c5;
+  --red: #ff573f;
+  --red-dark: #c64330;
+  --sage: #697b70;
+  --shadow: 0 22px 50px #17161324;
+  --serif: "Playfair Display", "Bodoni 72", Georgia, serif;
+  --sans: "DM Sans", "Helvetica Neue", Arial, sans-serif;
+  --display-italic: "Playfair Display", "Bodoni 72", Georgia, serif;
+}
+
+html { background:var(--paper); }
+body { background:var(--paper); color:var(--ink); font-family:var(--sans); }
+h1, h2, h3 { font-family:var(--serif); font-weight:400; }
+::selection { background:var(--red); color:#211f1d; }
+:focus-visible { outline:2px solid var(--red); outline-offset:4px; }
+
+/* Stronger editorial contrast while retaining the existing shared layout. */
+.site-header { background:#242321; border-bottom:1px solid #ffffff25; }
+.wordmark-name { font-size:21px; }
+.main-nav a { transition:color .25s ease, letter-spacing .25s ease; }
+.main-nav a:hover { letter-spacing:.14em; }
+.main-nav a.active:after { height:2px; background:var(--red); }
+.site-footer { background:#242321; border-top:4px solid var(--red); }
+.site-footer .footer-seal { border-color:var(--red); color:var(--red); }
+
+.home-hero { background:#252422; }
+.home-hero::after { content:"STORIES"; position:absolute; z-index:0; right:-.03em; bottom:-.18em; color:transparent; -webkit-text-stroke:1px #ffffff13; font:italic clamp(110px,22vw,330px)/.8 var(--display-italic); letter-spacing:-.08em; pointer-events:none; }
+.hero-art { z-index:1; }
+.home-hero .eyebrow, .interior-hero .eyebrow { color:#ff8972; }
+.home-hero h1 { font-size:clamp(54px,8.2vw,118px); }
+.hero-art img { filter:drop-shadow(0 28px 26px #0007); }
+.definition-card { border-color:#bfb8ac; }
+.definition-card h2 { font-size:clamp(36px,4vw,52px); }
+.toc-section { position:relative; }
+.toc-section::before { content:""; position:absolute; left:5vw; right:5vw; top:0; border-top:1px solid var(--line); }
+.toc-card { position:relative; border-top:3px solid transparent; box-shadow:0 1px 0 #26231d12; }
+.toc-card:hover { border-top-color:var(--red); box-shadow:var(--shadow); }
+.toc-card .card-number { font-size:10px; }
+.toc-card h3 { font-size:clamp(20px,2vw,28px); }
+.toc-card:nth-child(3n) { background:#ff573f; }
+.toc-card:nth-child(3n) p, .toc-card:nth-child(3n) .card-number { color:#38251f; }
+
+.interior-hero { background:#252422; }
+.interior-hero h1 { font-size:clamp(56px,8vw,108px); }
+.interior-hero::after { border-color:#ffffff2c; }
+.interior-hero > .eyebrow { position:relative; z-index:1; }
+.interior-hero h1, .interior-hero p { position:relative; z-index:1; }
+.interior-hero::before { content:""; position:absolute; right:6%; bottom:-.36em; color:transparent; -webkit-text-stroke:1px #ffffff18; font:italic clamp(100px,17vw,240px)/1 var(--display-italic); letter-spacing:-.08em; pointer-events:none; }
+#page-documentary .interior-hero::before { content:"FILM"; }
+#page-art-works .interior-hero::before { content:"ART"; }
+#page-picture-book .interior-hero::before { content:"BOOK"; }
+#page-other-works .interior-hero::before { content:"WORDS"; }
+#page-leave-love .interior-hero::before { content:"LOVE"; }
+
+.button { border-color:var(--ink); transition:transform .28s ease,background .28s ease,color .28s ease,border-color .28s ease; }
+.button:hover { transform:translateY(-2px); }
+.button-dark { background:#252422; }
+.button-dark:hover { background:var(--red); border-color:var(--red); color:#211f1d; }
+.article-card { border-top:3px solid var(--red); }
+.article-card:nth-child(3n + 2) { background:#e5e0d7; }
+.article-card:nth-child(3n) .number { color:var(--sage); }
+.purpose-band { background:var(--red); }
+.book-stage { box-shadow:inset 0 0 0 1px #ffffff9c; }
+.guestbook-form { border-top:4px solid var(--red); }
+.note-card { border-bottom:1px solid #26231d1c; }
+
+@media(max-width:700px) {
+  .home-hero h1 { font-size:clamp(48px,15vw,74px); }
+  .interior-hero h1 { font-size:clamp(49px,14vw,76px); }
+  .toc-card:nth-child(3n) { background:#ff573f; }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  *, *::before, *::after { scroll-behavior:auto!important; transition-duration:.01ms!important; animation-duration:.01ms!important; }
+}

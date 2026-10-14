@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#262522">
+  <meta name="description" content="A thoughtful collection of stories, paintings, and encouragement for children with cancer and their caregivers.">
+  <title>Still, We Bloom — Jinyuan He</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="art-works.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="wordmark" href="#home" aria-label="Still, We Bloom home"><span class="wordmark-mark">S<span>·</span>W</span><span class="wordmark-name">Still, We Bloom</span></a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+      <a href="#home" data-page="home">Home</a><a href="#documentary" data-page="documentary">Documentary</a><a href="#art-works" data-page="art-works">Art Works</a><a href="#picture-book" data-page="picture-book">Picture Book</a><a href="#other-works" data-page="other-works">Other Works</a><a href="#leave-love" data-page="leave-love">Leave Love</a>
+    </nav>
+  </header>
+  <main id="app-main">
+    <section class="page active" id="page-home" data-route="home"></section>
+    <section class="page" id="page-documentary" data-route="documentary"></section>
+    <section class="page" id="page-art-works" data-route="art-works"></section>
+    <section class="page" id="page-picture-book" data-route="picture-book"></section>
+    <section class="page" id="page-other-works" data-route="other-works"></section>
+    <section class="page" id="page-leave-love" data-route="leave-love"></section>
+  </main>
+  <footer class="site-footer"><span class="footer-seal" aria-hidden="true">LOVE</span><p>Made with love for every child and every caregiver.</p><a href="#home">Back to top ↑</a></footer>
+  <dialog class="painting-dialog" id="painting-dialog" aria-label="Painting detail"><button class="dialog-close" aria-label="Close painting detail">×</button><div id="painting-dialog-content"></div></dialog>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+  <script src="art-works.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+/* Edit this file to change all site copy, links, media paths, and painting records. */
+const SITE_DATA = {
+  title: "Still, We Bloom",
+  introduction: "Jinyuan He is a 17-year-old girl who has spent 9 years of her life practicing Chinese painting. She has volunteered for cancer patients and their families since Grade 10.",
+  caregiver: "A caregiver is an unpaid individual, such as a family member, partner, friend, or neighbor, who provides regular care, assistance, or supervision to someone with a chronic illness, disability, functional limitation, or old-age needs.",
+  documentary: {
+    title: "A Room for Hope",
+    description: "A documentary shaped by the voices, small rituals, and creative moments shared during the art therapy sessions.",
+    credit: "Edited and directed by Jinyuan He",
+    video: "", // Replace with a video URL or a local file path, for example assets/documentary.mp4
+    poster: "assets/paintings/painting-04.svg"
+  },
+  books: {
+    english: { label: "English edition", pdf: "" }, // Add the file path when the PDF is ready.
+    chinese: { label: "Chinese edition", pdf: "" } // Add the file path when the PDF is ready.
+  },
+  articles: Array.from({ length: 9 }, (_, i) => ({
+    number: String(i + 1).padStart(2, "0"),
+    title: `A Family's Story ${String(i + 1).padStart(2, "0")}`,
+    summary: "A conversation about finding strength, support, and new beginnings after treatment.",
+    url: "#" // Replace with the corresponding WeChat Official Account article URL.
+  })),
+  paintings: [
+    { id:"p01", image:"assets/paintings/painting-01.svg", session:1, date:"May 9, 2026", age:5, gender:"girl", hasHair:false, caption:"A little garden under a wide blue sky." },
+    { id:"p02", image:"assets/paintings/painting-02.svg", session:1, date:"May 9, 2026", age:7, gender:"boy", hasHair:true, caption:"The people I love, all together." },
+    { id:"p03", image:"assets/paintings/painting-03.svg", session:1, date:"May 9, 2026", age:9, gender:"girl", hasHair:true, caption:"A quiet afternoon by the window." },
+    { id:"p04", image:"assets/paintings/painting-04.svg", session:1, date:"May 9, 2026", age:6, gender:"boy", hasHair:false, caption:"My wish is to travel far away." },
+    { id:"p05", image:"assets/paintings/painting-05.svg", session:2, date:"May 16, 2026", age:8, gender:"girl", hasHair:true, caption:"Flowers that keep opening." },
+    { id:"p06", image:"assets/paintings/painting-06.svg", session:2, date:"May 16, 2026", age:10, gender:"boy", hasHair:true, caption:"A bright day with my family." },
+    { id:"p07", image:"assets/paintings/painting-07.svg", session:2, date:"May 16, 2026", age:4, gender:"girl", hasHair:false, caption:"A little bird on a branch." },
+    { id:"p08", image:"assets/paintings/painting-08.svg", session:2, date:"May 16, 2026", age:12, gender:"boy", hasHair:true, caption:"The sea is full of color." },
+    { id:"p09", image:"assets/paintings/painting-09.svg", session:3, date:"May 23, 2026", age:7, gender:"girl", hasHair:true, caption:"A place where everyone can rest." },
+    { id:"p10", image:"assets/paintings/painting-10.svg", session:3, date:"May 23, 2026", age:11, gender:"boy", hasHair:false, caption:"I drew the moon I saw last night." },
+    { id:"p11", image:"assets/paintings/painting-11.svg", session:3, date:"May 23, 2026", age:7, gender:"girl", hasHair:false, caption:"My brave little flower." },
+    { id:"p12", image:"assets/paintings/painting-12.svg", session:3, date:"May 23, 2026", age:5, gender:"boy", hasHair:true, caption:"A house with a very big garden." },
+    { id:"p13", image:"assets/paintings/painting-13.svg", session:4, date:"May 30, 2026", age:8, gender:"girl", hasHair:true, caption:"Sunlight coming into my room." },
+    { id:"p14", image:"assets/paintings/painting-14.svg", session:4, date:"May 30, 2026", age:6, gender:"boy", hasHair:false, caption:"A mountain path to somewhere new." },
+    { id:"p15", image:"assets/paintings/painting-15.svg", session:4, date:"May 30, 2026", age:9, gender:"girl", hasHair:false, caption:"I am thinking of the people at home." },
+    { id:"p16", image:"assets/paintings/painting-16.svg", session:4, date:"May 30, 2026", age:13, gender:"boy", hasHair:true, caption:"A city made of my favorite colors." },
+    { id:"p17", image:"assets/paintings/painting-17.svg", session:5, date:"June 6, 2026", age:4, gender:"girl", hasHair:true, caption:"The sky after the rain." },
+    { id:"p18", image:"assets/paintings/painting-18.svg", session:5, date:"June 6, 2026", age:8, gender:"boy", hasHair:true, caption:"Our home is warm and bright." },
+    { id:"p19", image:"assets/paintings/painting-19.svg", session:5, date:"June 6, 2026", age:10, gender:"girl", hasHair:false, caption:"A little note for tomorrow." },
+    { id:"p20", image:"assets/paintings/painting-20.svg", session:5, date:"June 6, 2026", age:6, gender:"boy", hasHair:true, caption:"A boat on a calm river." },
+    { id:"p21", image:"assets/paintings/painting-21.svg", session:6, date:"June 13, 2026", age:12, gender:"girl", hasHair:true, caption:"A tree with room for every bird." },
+    { id:"p22", image:"assets/paintings/painting-22.svg", session:6, date:"June 13, 2026", age:5, gender:"boy", hasHair:false, caption:"The sun follows me everywhere." },
+    { id:"p23", image:"assets/paintings/painting-23.svg", session:6, date:"June 13, 2026", age:9, gender:"girl", hasHair:true, caption:"My favorite colors are here." },
+    { id:"p24", image:"assets/paintings/painting-24.svg", session:6, date:"June 13, 2026", age:7, gender:"boy", hasHair:false, caption:"A small world full of friends." },
+    { id:"p25", image:"assets/paintings/painting-25.svg", session:7, date:"June 18, 2026", age:7, gender:"girl", hasHair:false, caption:"A portrait of my hopes." },
+    { id:"p26", image:"assets/paintings/painting-26.svg", session:7, date:"June 18, 2026", age:11, gender:"boy", hasHair:true, caption:"We are together beneath the trees." },
+    { id:"p27", image:"assets/paintings/painting-27.svg", session:8, date:"June 25, 2026", age:8, gender:"girl", hasHair:true, caption:"Tomorrow is waiting in the garden." },
+    { id:"p28", image:"assets/paintings/painting-28.svg", session:8, date:"June 25, 2026", age:6, gender:"boy", hasHair:false, caption:"A bright red sun over our home." }
+  ],
+  xuanPaintingId: "p25",
+  xuanGuessImage: "assets/paintings/painting-28.svg",
+  xuanStory: "This is Xuan, diagnosed with Medulloblastoma. Xuan is a girl from Guangzhou, born in July 2018. She was diagnosed with medulloblastoma in January 2026. Her condition is currently stable, and she is receiving treatment at Sun Yat-sen University Cancer Center. This painting was created on June 18, 2026.",
+  guestbook: { maxLength: 280, storageKey: "still-we-bloom-messages", sharedApiUrl: "" }
+};

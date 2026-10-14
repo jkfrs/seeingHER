@@ -1,0 +1,63 @@
+/* Edit this file to change all site copy, links, media paths, and painting records. */
+const SITE_DATA = {
+  title: "Still, We Bloom",
+  introduction: "Jinyuan He is a 17-year-old girl who has spent 9 years of her life practicing Chinese painting. She has volunteered for cancer patients and their families since Grade 10.",
+  siteImages: { portrait: "assets/jinyuan.png", cover: "assets/mainpage.png" },
+  caregiver: "A caregiver is an unpaid individual, such as a family member, partner, friend, or neighbor, who provides regular care, assistance, or supervision to someone with a chronic illness, disability, functional limitation, or old-age needs.",
+  documentary: {
+    title: "A Room for Hope",
+    description: "A documentary shaped by the voices, small rituals, and creative moments shared during the art therapy sessions.",
+    credit: "Edited and directed by Jinyuan He",
+    video: "", // Replace with a video URL or a local file path, for example assets/documentary.mp4
+    poster: "assets/paintings/painting-04.svg"
+  },
+  books: {
+    english: { label: "English", pdf: "assets/books/english.pdf", pages: Array.from({ length: 30 }, (_, index) => `assets/books/english/page-${String(index + 1).padStart(2, "0")}.webp`), coverPage: "right", spreads: true },
+    chinese: { label: "中文", pdf: "assets/books/chinese.pdf", pages: Array.from({ length: 29 }, (_, index) => `assets/books/chinese/page-${String(index + 1).padStart(2, "0")}.webp`), coverPage: "right", spreads: true }
+  },
+  articles: [
+    { number: "01", title: "From a Terminally Ill Teenager to a Barista", summary: "For Bian’s family, true courage is not being free from fear, but choosing to believe and choosing to keep moving forward despite it.", url: "https://mp.weixin.qq.com/s/frtZi6VZMs5OYLCJjoHwrQ" },
+    { number: "02", title: "From Leukemia at 11 to Nursing Student", summary: "The secret to staying as cheerful and optimistic as Fu Siyao is to regard every experience in life—good or bad—as a gift from fate, accepting it calmly and living through it wholeheartedly.", url: "https://mp.weixin.qq.com/s/8uemUOVAtx0KCG3HXUtncg" },
+    { number: "03", title: "From Leukemia Survivor to PhD Student", summary: "Diudiu: “Don’t be trapped by the past; you have already been given a new life. Don’t dwell on your illness, gender, or appearance. From today on, health, happiness, and joy are what matter most in your life.”", url: "https://mp.weixin.qq.com/s/DEQDmgqlKgNJ7kAM584mlw" },
+    { number: "04", title: "826 Days of Battling Cancer with Mom", summary: "8 rounds of chemotherapy, 2 surgeries, 2 autologous stem cell transplants, 20 rounds of radiotherapy, 5 rounds of immunotherapy… Every obstacle was crossed by Gao Le and mother.", url: "https://mp.weixin.qq.com/s/5jVw2uG6GtE4UyDInzVweQ" },
+    { number: "05", title: "Nine Years in Remission, Starting Fresh", summary: "From age 16 to 25, Qin Zixuan went through chemotherapy, transplantation, complications, uncertainty, fear… but also through her parents’ love and her own determination and strength of spirit.", url: "https://mp.weixin.qq.com/s/SnC3tUaVROwQOQrHnFcOhg" },
+    { number: "06", title: "From the ICU to Tenth Grade with Mom", summary: "Today, Ru is optimistic, cheerful, and confident, with clear academic goals. She also has all the quintessential interests of a teenage girl: makeup, cosplay, anime and manga, drawing, and music.", url: "https://mp.weixin.qq.com/s/K1fpZw4NkcO5l0jVnTepfg" },
+    { number: "07", title: "900 Days of Leukemia Treatment, Zero Infections", summary: "Shishi’s mother: “At that moment, I thought that if my child was doing well, and that could make newly diagnosed families a little less afraid, then at least we could offer them some comfort.”", url: "https://mp.weixin.qq.com/s/0hCkRhi0O_uRr1Ph73roSw" },
+    { number: "08", title: "From a Coma to Running Again", summary: "From a critically ill child who was bedridden to a teenager who could run again, Wenxin measured the distance of his rebirth with his own two legs.", url: "https://mp.weixin.qq.com/s/rpDMibxwIkLe23eMpw-JEw?scene=1" },
+    { number: "09", title: "From Cancer Recurrence Survivor to Volunteer Barber", summary: "Hu Jingrui got sick, received treatment, relapsed, underwent treatment again, made it through, grew up, and then wanted to help those who are still going through everything he once did in his own way.", url: "" } // Link will be provided later
+  ],
+  paintings: [
+    { id:"p01", image:"assets/paintings/painting-01.svg", session:1, date:"May 9, 2026", age:5, gender:"girl", hasHair:false, caption:"A little garden under a wide blue sky." },
+    { id:"p02", image:"assets/paintings/painting-02.svg", session:1, date:"May 9, 2026", age:7, gender:"boy", hasHair:true, caption:"The people I love, all together." },
+    { id:"p03", image:"assets/paintings/painting-03.svg", session:1, date:"May 9, 2026", age:9, gender:"girl", hasHair:true, caption:"A quiet afternoon by the window." },
+    { id:"p04", image:"assets/paintings/painting-04.svg", session:1, date:"May 9, 2026", age:6, gender:"boy", hasHair:false, caption:"My wish is to travel far away." },
+    { id:"p05", image:"assets/paintings/painting-05.svg", session:2, date:"May 16, 2026", age:8, gender:"girl", hasHair:true, caption:"Flowers that keep opening." },
+    { id:"p06", image:"assets/paintings/painting-06.svg", session:2, date:"May 16, 2026", age:10, gender:"boy", hasHair:true, caption:"A bright day with my family." },
+    { id:"p07", image:"assets/paintings/painting-07.svg", session:2, date:"May 16, 2026", age:4, gender:"girl", hasHair:false, caption:"A little bird on a branch." },
+    { id:"p08", image:"assets/paintings/painting-08.svg", session:2, date:"May 16, 2026", age:12, gender:"boy", hasHair:true, caption:"The sea is full of color." },
+    { id:"p09", image:"assets/paintings/painting-09.svg", session:3, date:"May 23, 2026", age:7, gender:"girl", hasHair:true, caption:"A place where everyone can rest." },
+    { id:"p10", image:"assets/paintings/painting-10.svg", session:3, date:"May 23, 2026", age:11, gender:"boy", hasHair:false, caption:"I drew the moon I saw last night." },
+    { id:"p11", image:"assets/paintings/painting-11.svg", session:3, date:"May 23, 2026", age:7, gender:"girl", hasHair:false, caption:"My brave little flower." },
+    { id:"p12", image:"assets/paintings/painting-12.svg", session:3, date:"May 23, 2026", age:5, gender:"boy", hasHair:true, caption:"A house with a very big garden." },
+    { id:"p13", image:"assets/paintings/painting-13.svg", session:4, date:"May 30, 2026", age:8, gender:"girl", hasHair:true, caption:"Sunlight coming into my room." },
+    { id:"p14", image:"assets/paintings/painting-14.svg", session:4, date:"May 30, 2026", age:6, gender:"boy", hasHair:false, caption:"A mountain path to somewhere new." },
+    { id:"p15", image:"assets/paintings/painting-15.svg", session:4, date:"May 30, 2026", age:9, gender:"girl", hasHair:false, caption:"I am thinking of the people at home." },
+    { id:"p16", image:"assets/paintings/painting-16.svg", session:4, date:"May 30, 2026", age:13, gender:"boy", hasHair:true, caption:"A city made of my favorite colors." },
+    { id:"p17", image:"assets/paintings/painting-17.svg", session:5, date:"June 6, 2026", age:4, gender:"girl", hasHair:true, caption:"The sky after the rain." },
+    { id:"p18", image:"assets/paintings/painting-18.svg", session:5, date:"June 6, 2026", age:8, gender:"boy", hasHair:true, caption:"Our home is warm and bright." },
+    { id:"p19", image:"assets/paintings/painting-19.svg", session:5, date:"June 6, 2026", age:10, gender:"girl", hasHair:false, caption:"A little note for tomorrow." },
+    { id:"p20", image:"assets/paintings/painting-20.svg", session:5, date:"June 6, 2026", age:6, gender:"boy", hasHair:true, caption:"A boat on a calm river." },
+    { id:"p21", image:"assets/paintings/painting-21.svg", session:6, date:"June 13, 2026", age:12, gender:"girl", hasHair:true, caption:"A tree with room for every bird." },
+    { id:"p22", image:"assets/paintings/painting-22.svg", session:6, date:"June 13, 2026", age:5, gender:"boy", hasHair:false, caption:"The sun follows me everywhere." },
+    { id:"p23", image:"assets/paintings/painting-23.svg", session:6, date:"June 13, 2026", age:9, gender:"girl", hasHair:true, caption:"My favorite colors are here." },
+    { id:"p24", image:"assets/paintings/painting-24.svg", session:6, date:"June 13, 2026", age:7, gender:"boy", hasHair:false, caption:"A small world full of friends." },
+    { id:"p25", image:"assets/paintings/painting-25.svg", session:7, date:"June 18, 2026", age:7, gender:"girl", hasHair:false, caption:"A portrait of my hopes." },
+    { id:"p26", image:"assets/paintings/painting-26.svg", session:7, date:"June 18, 2026", age:11, gender:"boy", hasHair:true, caption:"We are together beneath the trees." },
+    { id:"p27", image:"assets/paintings/painting-27.svg", session:8, date:"June 25, 2026", age:8, gender:"girl", hasHair:true, caption:"Tomorrow is waiting in the garden." },
+    { id:"p28", image:"assets/paintings/painting-28.svg", session:8, date:"June 25, 2026", age:6, gender:"boy", hasHair:false, caption:"A bright red sun over our home." }
+  ],
+  xuanPaintingId: "p25",
+  xuanGuessImage: "assets/paintings/painting-28.svg",
+  xuanStory: "This is Xuan, diagnosed with Medulloblastoma. Xuan is a girl from Guangzhou, born in July 2018. She was diagnosed with medulloblastoma in January 2026. Her condition is currently stable, and she is receiving treatment at Sun Yat-sen University Cancer Center. This painting was created on June 18, 2026.",
+  guestbook: { maxLength: 280, storageKey: "still-we-bloom-messages", sharedApiUrl: "" }
+};
