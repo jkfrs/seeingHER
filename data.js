@@ -31,10 +31,9 @@ const SITE_DATA = {
     ],
     credit: "Edited and directed by",
     creditName: "Jinyuan He",
-    video: "assets/video/documentary.mp4", // Replace this path to use another documentary file.
-    poster: "assets/video/poster.jpg",
-    videoWidth: 1930,
-    videoHeight: 1080
+    youtubeEmbedSrc: "https://www.youtube.com/embed/81N1dAJ-tpI?si=9o_MENE67TCkkFNK", // Replace this address to use another YouTube video.
+    youtubeWatchUrl: "https://youtu.be/81N1dAJ-tpI",
+    youtubeLinkText: "Watch on YouTube"
   },
   books: {
     english: { label: "English", pdf: "assets/books/english.pdf", pages: Array.from({ length: 30 }, (_, index) => `assets/books/english/page-${String(index + 1).padStart(2, "0")}.webp`), coverPage: "right", spreads: true },

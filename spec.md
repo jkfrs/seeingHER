@@ -192,3 +192,11 @@ vibe coding/
 ## Out of scope for the static MVP
 
 - Production video hosting, final book PDFs, final artwork, and final article URLs; the project currently contains editable placeholders.
+
+
+#### YouTube Error 153 follow-up — October 15, 2026
+
+- Replace the local video with the standard YouTube iframe at `https://www.youtube.com/embed/81N1dAJ-tpI?si=9o_MENE67TCkkFNK`, stored in `documentary.youtubeEmbedSrc` in `data.js`. Keep the requested iframe attributes and responsive 16:9 frame.
+- Keep “Watch on YouTube” below the frame as a visible secondary button linking to `https://youtu.be/81N1dAJ-tpI` in a new tab.
+- A source scan found no referrer meta tag, Referrer-Policy or Content-Security-Policy directive, `no-referrer` iframe policy, or iframe sandbox blocking YouTube.
+- Add a README note that the embed requires a web address and is expected to fail when opened directly from the file system.

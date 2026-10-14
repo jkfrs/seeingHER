@@ -37,10 +37,10 @@ function renderHome() {
 
 function renderDocumentary() {
   const d = SITE_DATA.documentary;
-  const media = `<video controls preload="metadata" playsinline width="${d.videoWidth}" height="${d.videoHeight}" poster="${d.poster}"><source src="${d.video}" type="video/mp4"><p>Your browser does not support HTML video. Open the documentary file: <a href="${d.video}">documentary video</a>.</p></video>`;
+  const media = `<iframe width="560" height="315" src="${d.youtubeEmbedSrc}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
   const intro = d.intro.split("\n").map(escapeHtml).join("<br>");
   const items = d.descriptionItems.map(item => `<li>${item}</li>`).join("");
-  $("#page-documentary").innerHTML = `<section class="interior-hero"><span class="eyebrow">A short documentary</span><h1>Documentary</h1><p class="documentary-intro">${intro}</p></section><div class="documentary-content"><div class="video-frame" style="--video-ratio:${d.videoWidth} / ${d.videoHeight}">${media}</div><div class="video-meta"><div><h2>${d.title}</h2><ul class="documentary-points">${items}</ul></div><p class="credit"><span>${d.credit}</span> <span class="credit-name">${d.creditName}</span></p></div></div>`;
+  $("#page-documentary").innerHTML = `<section class="interior-hero"><span class="eyebrow">A short documentary</span><h1>Documentary</h1><p class="documentary-intro">${intro}</p></section><div class="documentary-content"><div class="video-frame">${media}</div><a class="youtube-watch-link button" href="${d.youtubeWatchUrl}" target="_blank" rel="noopener noreferrer">${escapeHtml(d.youtubeLinkText)}</a><div class="video-meta"><div><h2>${d.title}</h2><ul class="documentary-points">${items}</ul></div><p class="credit"><span>${d.credit}</span> <span class="credit-name">${d.creditName}</span></p></div></div>`;
 }
 
 function renderOtherWorks() {
